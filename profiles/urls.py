@@ -1,0 +1,12 @@
+from django.urls import path
+from .views import my_profile_view
+
+app_name = 'profiles'
+
+urlpatterns = [
+    path('myprofile/', my_profile_view, name = "my_profile_view" )
+]
+
+
+# http://127.0.0.1:8000/profiles --> main url.py
+# http://127.0.0.1:8000//profiles/myprofile --> full path 

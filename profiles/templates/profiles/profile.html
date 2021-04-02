@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ request.user }}{% endblock %}
+
+{% block content %} 
+<h1> My Profile </h1>
+
+<hr>
+
+{{ user_object.first_name }}
+<br>
+{{ user_object.bio }}
+<br>
+
+{{ user_object.get_friends_count }}
+<br>
+<h3> Friends-list </h3>
+<ul>
+    {% for friend in user_object.get_friends %}
+        <li>{{ friend }}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
