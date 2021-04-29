@@ -1,0 +1,1 @@
+default_app_config = 'posts.apps.PostsConfig'  # chande the heading 'posts' verbosely

@@ -1,5 +1,5 @@
 body{
-    background-color:antiquewhite !important;
+    background-color:white !important;
 }
 
 .nav{
@@ -10,4 +10,29 @@ body{
 
 .mb-7{
     margin-bottom: 7px !important;
+}
+
+.mb-5{
+    margin-bottom: 5px  !important;
+
+}
+.mb-10{
+    margin-bottom: 10px  !important;
+
+}
+.w-big{ 
+    width: 200px !important;
+}
+
+.bwhite-lg{
+    background-color: transparent !important;
+}
+
+.bwhite-sm{
+    background-color: transparent !important;
+    width: 10px !important;
+}
+
+.comment-box{
+    display: none;
 }

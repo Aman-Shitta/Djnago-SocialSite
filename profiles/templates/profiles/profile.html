@@ -3,23 +3,48 @@
 {% block title %} {{ request.user }}{% endblock %}
 
 {% block content %} 
-<h1> My Profile </h1>
-
-<hr>
-
-{{ user_object.first_name }}
-<br>
-{{ user_object.bio }}
-<br>
-
-{{ user_object.get_friends_count }}
-<br>
-<h3> Friends-list </h3>
-<ul>
-    {% for friend in user_object.get_friends %}
-        <li>{{ friend }}</li>
-    {% endfor %}
-</ul>
 
 
+<h1> My Profile :  {{my_profile.first_name}} {{my_profile.last_name}} </h1>
+<div class='six wide column'>
+                <img class="ui medium rounded image" src={{my_profile.avatar.url}} width=50px height=50px>
+                <div class="row mt-5">
+                    <button class='ui secondary button' id='modal-btn'>Update your profile</button>
+<table> 
+<tr>          </div>
+<td> Friends : </td>
+<td>
+    <ul>
+        {% for friend in my_profile.get_friends %}
+            <li>{{friend}}</li>
+       {% endfor %}
+    </ul>
+</td>
+</tr>
+<tr>
+    <td> Friends Count : </td>
+    <td>
+        {{my_profile.get_friends_count}}
+    </td>
+</tr>
+<tr>
+    <td>POSTS Count : </td>
+    <td>
+        {{my_profile.get_posts_num}}
+    </td>
+</tr>
+
+<tr>
+    <td> Given Likes : </td>
+    <td>
+        {{my_profile.get_likes_given}}
+    </td>
+</tr>
+<tr>
+    <td> Recieved likes: </td>
+    <td>
+        {{my_profile.get_likes_received}}
+    </td>
+</tr>
+<table>
 {% endblock %}
